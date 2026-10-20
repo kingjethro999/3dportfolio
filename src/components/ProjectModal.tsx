@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, ExternalLink } from 'lucide-react';
 import { ProjectItem } from '../data/portfolioData';
+import { MediaPreview } from './MediaPreview';
 
 export interface ProjectModalProps {
   project: ProjectItem | null;
@@ -77,27 +78,25 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-          <div className="rounded-3xl overflow-hidden h-44 sm:h-52 bg-[#16181C]">
-            <img
+          <div className="rounded-3xl overflow-hidden h-44 sm:h-52 bg-[#16181C] border border-[#D7E2EA]/15">
+            <MediaPreview
               src={project.col1Image1}
               alt={`${project.name} gallery view 1`}
-              referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="rounded-3xl overflow-hidden h-44 sm:h-52 bg-[#16181C]">
-            <img
+          <div className="rounded-3xl overflow-hidden h-44 sm:h-52 bg-[#16181C] border border-[#D7E2EA]/15">
+            <MediaPreview
               src={project.col1Image2}
               alt={`${project.name} gallery view 2`}
-              referrerPolicy="no-referrer"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="rounded-3xl overflow-hidden h-44 sm:h-52 bg-[#16181C]">
-            <img
+          <div className="rounded-3xl overflow-hidden h-44 sm:h-52 bg-[#16181C] border border-[#D7E2EA]/15">
+            <MediaPreview
               src={project.col2Image}
-              alt={`${project.name} gallery view 3`}
-              referrerPolicy="no-referrer"
+              poster={project.posterImage}
+              alt={`${project.name} live video demo`}
               className="w-full h-full object-cover"
             />
           </div>

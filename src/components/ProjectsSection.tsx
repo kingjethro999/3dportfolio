@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { FadeIn } from './FadeIn';
 import { LiveProjectButton } from './LiveProjectButton';
+import { MediaPreview } from './MediaPreview';
 import { PROJECTS_LIST, ProjectItem } from '../data/portfolioData';
 import { calculateCardScale } from '../utils/portfolioMath';
 
@@ -84,52 +85,47 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
 
-        {/* Bottom Row: Two-column Image Grid (40% left stacked / 60% right tall) */}
+        {/* Bottom Row: Two-column Media Grid (40% left stacked / 60% right tall video or showcase) */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           {/* Left Column (40%) */}
           <div className="w-full sm:w-[40%] flex flex-col gap-3 sm:gap-4">
             <div
-              className="w-full rounded-[32px] sm:rounded-[44px] md:rounded-[52px] overflow-hidden bg-[#16181C]"
+              className="w-full rounded-[32px] sm:rounded-[44px] md:rounded-[52px] overflow-hidden bg-[#16181C] border border-[#D7E2EA]/15"
               style={{ height: 'clamp(120px, 14vw, 200px)' }}
             >
-              <img
+              <MediaPreview
                 src={project.col1Image1}
-                alt={`${project.name} preview 1`}
-                loading="lazy"
-                referrerPolicy="no-referrer"
+                alt={`${project.name} repository preview 1`}
                 className="w-full h-full object-cover rounded-[32px] sm:rounded-[44px] md:rounded-[52px] block"
               />
             </div>
 
             <div
-              className="w-full rounded-[32px] sm:rounded-[44px] md:rounded-[52px] overflow-hidden bg-[#16181C]"
+              className="w-full rounded-[32px] sm:rounded-[44px] md:rounded-[52px] overflow-hidden bg-[#16181C] border border-[#D7E2EA]/15"
               style={{ height: 'clamp(140px, 18vw, 280px)' }}
             >
-              <img
+              <MediaPreview
                 src={project.col1Image2}
-                alt={`${project.name} preview 2`}
-                loading="lazy"
-                referrerPolicy="no-referrer"
+                alt={`${project.name} repository preview 2`}
                 className="w-full h-full object-cover rounded-[32px] sm:rounded-[44px] md:rounded-[52px] block"
               />
             </div>
           </div>
 
-          {/* Right Column (60%) */}
+          {/* Right Column (60%): Live Short Video Demo + Terminal Overlay */}
           <div
-            className="w-full sm:w-[60%] relative rounded-[32px] sm:rounded-[44px] md:rounded-[52px] overflow-hidden bg-[#16181C]"
+            className="w-full sm:w-[60%] relative rounded-[32px] sm:rounded-[44px] md:rounded-[52px] overflow-hidden bg-[#16181C] border border-[#D7E2EA]/15"
             style={{
               height: 'clamp(272px, calc(32vw + 16px), 496px)',
             }}
           >
-            <img
+            <MediaPreview
               src={project.col2Image}
-              alt={`${project.name} featured showcase`}
-              loading="lazy"
-              referrerPolicy="no-referrer"
+              poster={project.posterImage}
+              alt={`${project.name} featured demo showcase`}
               className="w-full h-full object-cover rounded-[32px] sm:rounded-[44px] md:rounded-[52px] block"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-5 sm:p-7 flex flex-col gap-2">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/65 to-transparent p-5 sm:p-7 flex flex-col gap-2 pointer-events-none">
               <pre className="font-mono text-[11px] sm:text-xs text-[#D7E2EA]/90 whitespace-pre-wrap leading-relaxed">
                 {project.terminalPreview}
               </pre>
