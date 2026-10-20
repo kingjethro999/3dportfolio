@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { MARQUEE_GIFS } from '../data/portfolioData';
 import { calculateMarqueeOffset } from '../utils/portfolioMath';
+import { MediaPreview } from './MediaPreview';
 
 export const MarqueeSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -44,7 +45,7 @@ export const MarqueeSection: React.FC = () => {
       className="bg-[#0C0C0C] pt-24 sm:pt-32 md:pt-40 pb-10 overflow-hidden"
     >
       <div className="flex flex-col gap-3">
-        {/* Row 1: first 11 images tripled, moves RIGHT on scroll */}
+        {/* Row 1: first 11 items tripled, moves RIGHT on scroll */}
         <div
           className="flex gap-3 justify-center"
           style={{
@@ -55,20 +56,18 @@ export const MarqueeSection: React.FC = () => {
           {tripledRow1.map((url, idx) => (
             <div
               key={`r1-${idx}`}
-              className="w-[420px] h-[270px] shrink-0 rounded-2xl overflow-hidden bg-[#16181C]"
+              className="w-[420px] h-[270px] shrink-0 rounded-2xl overflow-hidden bg-[#16181C] border border-[#D7E2EA]/15"
             >
-              <img
+              <MediaPreview
                 src={url}
-                alt={`3D Motion Showcase Row 1 Item ${(idx % 11) + 1}`}
-                loading="lazy"
-                referrerPolicy="no-referrer"
+                alt={`King Jethro Tooling Showcase Row 1 Item ${(idx % 11) + 1}`}
                 className="w-full h-full object-cover rounded-2xl block"
               />
             </div>
           ))}
         </div>
 
-        {/* Row 2: remaining 10 images tripled, moves LEFT on scroll */}
+        {/* Row 2: remaining 10 items tripled, moves LEFT on scroll */}
         <div
           className="flex gap-3 justify-center"
           style={{
@@ -79,13 +78,11 @@ export const MarqueeSection: React.FC = () => {
           {tripledRow2.map((url, idx) => (
             <div
               key={`r2-${idx}`}
-              className="w-[420px] h-[270px] shrink-0 rounded-2xl overflow-hidden bg-[#16181C]"
+              className="w-[420px] h-[270px] shrink-0 rounded-2xl overflow-hidden bg-[#16181C] border border-[#D7E2EA]/15"
             >
-              <img
+              <MediaPreview
                 src={url}
-                alt={`3D Motion Showcase Row 2 Item ${(idx % 10) + 1}`}
-                loading="lazy"
-                referrerPolicy="no-referrer"
+                alt={`King Jethro Tooling Showcase Row 2 Item ${(idx % 10) + 1}`}
                 className="w-full h-full object-cover rounded-2xl block"
               />
             </div>

@@ -13,6 +13,7 @@ export interface ProjectItem {
   col1Image1: string;
   col1Image2: string;
   col2Image: string;
+  posterImage?: string;
   summary: string;
   deliverables: string[];
   terminalPreview: string;
@@ -36,28 +37,29 @@ export const PROFILE_INFO = {
 export const HERO_PORTRAIT_URL =
   'https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png';
 
+// 21 authentic repository screenshots, live tool captures, and short demo videos
 export const MARQUEE_GIFS: string[] = [
-  'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
-  'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
-  'https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
-  'https://motionsites.ai/assets/hero-asme-preview-B_nGDnTP.gif',
-  'https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif',
-  'https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif',
-  'https://motionsites.ai/assets/hero-terra-preview-BFjrCr7T.gif',
-  'https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif',
-  'https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif',
-  'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif',
-  'https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif',
-  'https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif',
-  'https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif',
-  'https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif',
-  'https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif',
-  'https://motionsites.ai/assets/hero-new-era-preview-CocuDUm9.gif',
-  'https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif',
-  'https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif',
-  'https://motionsites.ai/assets/hero-celestia-preview-0yO3jXO8.gif',
+  '/assets/videos/viewre-demo.webm',
+  '/assets/repos/automator-mcp.png',
+  '/assets/projects/zyrk-cas.png',
+  '/assets/projects/promptdock-live.png',
+  '/assets/videos/goo-demo.webm',
+  '/assets/projects/dark-live.png',
+  '/assets/projects/accelsim-main.png',
+  '/assets/projects/figma-mcp-live.png',
+  '/assets/repos/automator-kanban.png',
+  '/assets/videos/zyrk-demo.webm',
+  '/assets/repos/promptdock-social-v2.png',
+  '/assets/repos/dark-main.png',
+  '/assets/projects/viewre-main.png',
+  '/assets/videos/accelsim-demo.webm',
+  '/assets/projects/goo-tui.png',
+  '/assets/repos/automator-achievements.png',
+  '/assets/projects/figmamcp-main.png',
+  '/assets/repos/promptdock-preview-1.png',
+  '/assets/projects/zyrk-bench.png',
+  '/assets/repos/automator-skills-hub.png',
+  '/assets/projects/accelsim-heatmap.png',
 ];
 
 export const ABOUT_CORNER_IMAGES = {
@@ -139,14 +141,12 @@ export const PROJECTS_LIST: ProjectItem[] = [
     name: 'Automator',
     category: 'AI & OS Automation',
     repoUrl: 'https://github.com/kingjethro999/automator',
-    col1Image1:
-      'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
-    col1Image2:
-      'https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif',
-    col2Image:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85',
+    col1Image1: '/assets/repos/automator-mcp.png',
+    col1Image2: '/assets/repos/automator-kanban.png',
+    col2Image: '/assets/videos/automator-session-orchestrator.mp4',
+    posterImage: '/assets/repos/automator-achievements.png',
     summary:
-      'A watched-mode AI computer operator featuring an observed UI execution timeline, AI cursor overlay, live UI event streams, and desktop/OS automation skills.',
+      'A watched-mode AI computer operator featuring an observed UI execution timeline, AI cursor overlay, live UI event streams, MCP server hub, and desktop/OS automation skills.',
     deliverables: ['Python', 'Watched-Mode Operator', 'AI Cursor Overlay', 'OS Automation Skills'],
     terminalPreview: '$ automator --watch --cursor-overlay\n[ timeline ] UI event stream attached · safety gate active',
   },
@@ -155,16 +155,14 @@ export const PROJECTS_LIST: ProjectItem[] = [
     name: 'Zyrk',
     category: 'Systems & Tooling',
     repoUrl: 'https://github.com/kingjethro999/zyrk',
-    col1Image1:
-      'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
-    col1Image2:
-      'https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif',
-    col2Image:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
+    col1Image1: '/assets/projects/zyrk-cas.png',
+    col1Image2: '/assets/projects/zyrk-bench.png',
+    col2Image: '/assets/videos/zyrk-demo.webm',
+    posterImage: '/assets/projects/zyrk-cas.png',
     summary:
-      'Fast, deduplicated package manager for Node.js projects built around a global content-addressable store and symlink/hardlink resolution to eradicate disk bloat.',
-    deliverables: ['TypeScript', 'Node.js', 'Content-Addressable Store', 'Hardlink Deduplication'],
-    terminalPreview: '$ zyrk install\n[ok] Linked 1,420 packages from global CAS in 380ms (0B duplicated)',
+      'Fast, deduplicated package manager for Node.js 24+ built around a global SHA-256 content-addressable store, crash-journaled lockfiles, and hardlink resolution to eradicate disk bloat.',
+    deliverables: ['TypeScript', 'Node.js 24+', 'Content-Addressable Store', 'Hardlink Deduplication'],
+    terminalPreview: '$ zyrk install --frozen-lockfile\n[ok] Linked 1,420 packages from global CAS in 380ms (0B duplicated)',
   },
   {
     number: '03',
@@ -172,12 +170,10 @@ export const PROJECTS_LIST: ProjectItem[] = [
     category: 'AI & Dev Tools',
     repoUrl: 'https://github.com/kingjethro999/promptdock',
     liveUrl: 'https://thepromptdock.vercel.app',
-    col1Image1:
-      'https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif',
-    col1Image2:
-      'https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif',
-    col2Image:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
+    col1Image1: '/assets/repos/promptdock-social-v2.png',
+    col1Image2: '/assets/repos/promptdock-preview-1.png',
+    col2Image: '/assets/videos/promptdock-demo.webm',
+    posterImage: '/assets/projects/promptdock-live.png',
     summary:
       'Local-first AI prompt engineering workspace with reusable templates, structured shape-contracts, live previews, and multi-provider fallback chains.',
     deliverables: ['JavaScript', 'Local-First Workspace', 'Shape Contracts', 'Multi-Provider Fallback'],
@@ -189,64 +185,56 @@ export const PROJECTS_LIST: ProjectItem[] = [
     category: 'Android / Kotlin',
     repoUrl: 'https://github.com/kingjethro999/D.A.R.K',
     liveUrl: 'https://d-a-r-k.vercel.app',
-    col1Image1:
-      'https://motionsites.ai/assets/hero-new-era-preview-CocuDUm9.gif',
-    col1Image2:
-      'https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif',
-    col2Image:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
+    col1Image1: '/assets/repos/dark-screenshot1.jpg',
+    col1Image2: '/assets/repos/dark-terminal-start.jpg',
+    col2Image: '/assets/videos/dark-demo.webm',
+    posterImage: '/assets/projects/dark-live.png',
     summary:
       "Developers' Adaptive Responsive Kernel: a minimalist, OLED-black, text-only Android launcher with an embedded Linux terminal built for distraction-free speed.",
     deliverables: ['Kotlin', 'Android Launcher', 'OLED-Black UI', 'Embedded Linux Shell'],
-    terminalPreview: 'dark-kernel@android:~$ launch --oled-minimal --shell=ash',
+    terminalPreview: 'root@dark:~# launch --oled-minimal --shell=ash · 100% text-only · 0 icons',
   },
   {
     number: '05',
     name: '3d-viewre',
     category: '3D Graphics / Web',
     repoUrl: 'https://github.com/kingjethro999/3d-viewre',
-    col1Image1:
-      'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
-    col1Image2:
-      'https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif',
-    col2Image:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
+    col1Image1: '/assets/projects/viewre-main.png',
+    col1Image2: '/assets/projects/viewre-formats.png',
+    col2Image: '/assets/videos/viewre-demo.webm',
+    posterImage: '/assets/projects/viewre-main.png',
     summary:
-      'High-performance in-browser 3D model viewer and topology inspector supporting GLB, GLTF, OBJ, STL, PLY, and FBX formats with 100% private client-side rendering.',
-    deliverables: ['Next.js', 'Three.js', 'React Three Fiber', 'Zustand Topology Inspector'],
-    terminalPreview: '[3d-viewre] Loaded mesh.glb · 142,800 tris · wireframe & normal inspection active',
+      'High-performance in-browser 3D model viewer and topology inspector supporting GLB, GLTF, OBJ, STL, PLY, and FBX formats with 100% private client-side Three.js rendering.',
+    deliverables: ['Next.js 16', 'Three.js', 'React Three Fiber', 'Zustand 5 Inspector'],
+    terminalPreview: '[3d-viewre] Loaded cyber_valkyrie_rig.glb · 142,800 tris · wireframe [W] active',
   },
   {
     number: '06',
     name: 'GOO',
     category: 'AI / Systems (Go)',
     repoUrl: 'https://github.com/kingjethro999/goo',
-    col1Image1:
-      'https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif',
-    col1Image2:
-      'https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif',
-    col2Image:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
+    col1Image1: '/assets/projects/goo-tui.png',
+    col1Image2: '/assets/projects/goo-safety.png',
+    col2Image: '/assets/videos/goo-demo.webm',
+    posterImage: '/assets/projects/goo-tui.png',
     summary:
-      'Terminal-first agentic coding assistant built in Go featuring Model Context Protocol (MCP) integration, parallel sub-agents, persistent memory, and 3-tier safety gating.',
-    deliverables: ['Go', 'Parallel Sub-Agents', 'MCP Integration', '3-Tier Safety Gating'],
-    terminalPreview: '$ goo run "refactor auth module" --agents=4 --safety=tier-2',
+      'Terminal-first agentic coding assistant built in Go featuring Bubbletea streaming TUI, Model Context Protocol (MCP) integration, parallel sub-agents, SQLite memory, and 3-tier safety gating.',
+    deliverables: ['Go', 'Parallel Sub-Agents', 'MCP JSON-RPC', '3-Tier Safety Gating'],
+    terminalPreview: '$ goo agent "refactor MCP transport" --parallel=4 --safety=allowlist_only',
   },
   {
     number: '07',
     name: 'Accel_Sim',
     category: 'ML Systems (Python)',
     repoUrl: 'https://github.com/kingjethro999/Accel_Sim',
-    col1Image1:
-      'https://motionsites.ai/assets/hero-asme-preview-B_nGDnTP.gif',
-    col1Image2:
-      'https://motionsites.ai/assets/hero-terra-preview-BFjrCr7T.gif',
-    col2Image:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
+    col1Image1: '/assets/projects/accelsim-main.png',
+    col1Image2: '/assets/projects/accelsim-heatmap.png',
+    col2Image: '/assets/videos/accelsim-demo.webm',
+    posterImage: '/assets/projects/accelsim-main.png',
     summary:
-      'CPU-based hardware estimation toolkit designed to predict the latency, roofline bottlenecks, and memory footprint of Transformer workloads on GPUs and TPUs.',
-    deliverables: ['Python', 'Transformer Profiling', 'GPU/TPU Roofline Model', 'Memory Estimator'],
-    terminalPreview: '$ accel-sim --model llama-70b --target h100-sxm\nEst. KV-Cache: 38.4GB · Prefill: 41.2ms',
+      'CPU-based hardware estimation toolkit hooking into PyTorch torch.fx graphs to predict latency, analytical Roofline bottlenecks, and KV-cache memory footprint on V100, A100, H100, and TPUs.',
+    deliverables: ['Python', 'PyTorch torch.fx', 'GPU/TPU Roofline Model', 'OOM Predictor'],
+    terminalPreview: '$ accel-sim compare transformer_block.py --devices v100,a100,h100\nRecommended: A100-40GB (90% Compute Bound · 41.2ms prefill)',
   },
   {
     number: '08',
@@ -254,15 +242,13 @@ export const PROJECTS_LIST: ProjectItem[] = [
     category: 'Dev Tools / MCP',
     repoUrl: 'https://github.com/kingjethro999/figma-mcp',
     liveUrl: 'https://figma-mcp-lilac.vercel.app',
-    col1Image1:
-      'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
-    col1Image2:
-      'https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif',
-    col2Image:
-      'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
+    col1Image1: '/assets/projects/figma-mcp-live.png',
+    col1Image2: '/assets/projects/figmamcp-main.png',
+    col2Image: '/assets/videos/figmamcp-demo.webm',
+    posterImage: '/assets/projects/figma-mcp-live.png',
     summary:
-      'Model Context Protocol bridge turning Figma design nodes and layout tokens directly into production component code inside agentic IDEs.',
-    deliverables: ['TypeScript', 'Model Context Protocol', 'Figma AST Bridge', 'Cursor / Agentic IDEs'],
-    terminalPreview: 'mcp://figma-bridge · synced 24 frames -> React + Tailwind components',
+      'Dual REST API proxy and Model Context Protocol server turning Figma design nodes and AutoLayout tokens directly into production React/Vue/HTML code inside Cursor IDE.',
+    deliverables: ['TypeScript', 'Model Context Protocol', 'Figma AST Bridge', 'Supabase IP Privacy'],
+    terminalPreview: 'mcp://figma-server · generate_code_from_figma_node -> React + Tailwind TSX',
   },
 ];
